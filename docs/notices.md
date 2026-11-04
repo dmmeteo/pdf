@@ -11,8 +11,11 @@ Every release archive carries the full notices for what it bundles:
 - **Linux:** the Debian copyright file of each bundled shared library. Each bundled library is byte-identical
   to a named Debian 12 package (`licenses/debian/`).
 - **Windows:** the Tesseract build's runtime DLLs come from MSYS2 MINGW64 packages. `licenses/TESSERACT-DLLS.txt`
-  maps every DLL to its exact MSYS2 package version and license, and `licenses/msys2/` holds the full license
-  texts from each package's exact upstream source.
+  maps every DLL to an MSYS2 package version and its license, and `licenses/msys2/` holds the full license texts
+  from that version's upstream source. The versions are the MSYS2 recipes current on the Tesseract build date
+  (2024-06-06), and they agree with every version string the DLLs embed. MSYS2 no longer hosts those 2024
+  binary packages, so the DLL bytes are not hash-proven against them, and DLLs without an embedded version
+  rest on the build date alone.
 
 ## Corresponding source
 
@@ -25,6 +28,9 @@ the [v0.1.0 release page](https://github.com/dmmeteo/pdf/releases/tag/v0.1.0), n
   Pango, FriBidi, libthai, libdatrie, libiconv, gettext (libintl), Graphite2, JBIG-KIT and the GCC 14 runtime
   libraries.
 
-Each tar file has a `README.txt` that lists the exact versions and the SHA-256 of every file.
+Each tar file has a `README.txt` that lists the versions and the SHA-256 of every file. The Linux libraries are
+byte-identical to the named Debian packages. For Windows, every upstream file matched its MSYS2 recipe's checksum
+except Pango's `720.patch`, which GitLab regenerates; its three commits are named instead. These files were
+checked as present and matching. That is not a legal guarantee.
 
 Questions about notices: open an issue.

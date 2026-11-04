@@ -40,9 +40,10 @@ Each archive bundles PDFium for rendering and Tesseract with English and Ukraini
 Third-party licenses ship inside every archive: `THIRD-PARTY-NOTICES/` (macOS),
 `usr/Resources/licenses/` (Linux) and `licenses/` (Windows). See [docs/notices.md](docs/notices.md).
 
-The Linux and Windows archives bundle some LGPL/GPL libraries. Their complete corresponding source is
-published on the same release page: `PDF-0.1.0-linux-debian-sources.tar` and
-`PDF-0.1.0-windows-msys2-sources.tar`.
+The Linux and Windows archives bundle some LGPL/GPL libraries. Their corresponding source is published on the
+same release page: `PDF-0.1.0-linux-debian-sources.tar` and `PDF-0.1.0-windows-msys2-sources.tar`.
+[docs/notices.md](docs/notices.md) explains how each library's version was identified and where that is
+inferred rather than hash-proven.
 
 ## Security and privacy
 
