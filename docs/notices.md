@@ -20,11 +20,12 @@ Every release archive carries the full notices for what it bundles:
 ## Corresponding source
 
 The LGPL/GPL libraries bundled in the Linux and Windows archives have their complete corresponding source on
-the [v0.1.0 release page](https://github.com/dmmeteo/pdf/releases/tag/v0.1.0), next to the downloads:
+the [v1.0.0 release page](https://github.com/dmmeteo/pdf/releases/tag/v1.0.0), next to the downloads
+(the v0.1.0 release page carries the same files under their 0.1.0 names):
 
-- `PDF-0.1.0-linux-debian-sources.tar`: Debian source packages for glibc (libresolv), GnuTLS, Nettle, GMP,
+- `PDF-1.0.0-linux-debian-sources.tar`: Debian source packages for glibc (libresolv), GnuTLS, Nettle, GMP,
   libunistring, libidn2, libtasn1, JBIG-KIT, librtmp, keyutils, acl and the GCC 12 runtime libraries.
-- `PDF-0.1.0-windows-msys2-sources.tar`: the MSYS2 recipes, patches and upstream sources for GLib, cairo,
+- `PDF-1.0.0-windows-msys2-sources.tar`: the MSYS2 recipes, patches and upstream sources for GLib, cairo,
   Pango, FriBidi, libthai, libdatrie, libiconv, gettext (libintl), Graphite2, JBIG-KIT and the GCC 14 runtime
   libraries.
 
