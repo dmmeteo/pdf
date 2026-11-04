@@ -18,10 +18,11 @@ This badge on the public download page is the attribution that license asks for.
 |---|---|---|---|
 | macOS | `PDF-0.1.0-macos-arm64.zip` | Apple silicon (arm64), macOS 27.0.1 or later | accepted on a Mac |
 | Linux | `PDF-0.1.0-linux-x86_64.tar.gz` | x86_64, glibc 2.36 or later, X11 or Wayland | started and rendered a PDF in a Debian 12 container |
-| Windows | not yet available | 64-bit Windows | a build exists and rendered a PDF under Wine 11, but it is not offered until the notices for its bundled MinGW libraries are complete |
+| Windows | `PDF-0.1.0-windows-x86_64.zip` | 64-bit Windows (x86_64) | started and rendered a PDF under Wine 11 on Linux; not yet tested on a Windows PC |
 
-Files appear on the Releases page when v0.1.0 is published. Verify each download against
-[SHA256SUMS](SHA256SUMS): `shasum -a 256 <file>` (macOS) or `sha256sum <file>` (Linux).
+Download from the [v0.1.0 release](https://github.com/dmmeteo/pdf/releases/tag/v0.1.0). Verify each file against
+[SHA256SUMS](SHA256SUMS): `shasum -a 256 <file>` (macOS), `sha256sum <file>` (Linux) or
+`Get-FileHash <file>` (Windows PowerShell).
 
 ## Install
 
@@ -29,12 +30,19 @@ Files appear on the Releases page when v0.1.0 is published. Verify each download
   see [first launch on macOS](docs/first-launch-macos.md) for the one-time Open Anyway step.
   It does not need a terminal command and does not turn off Gatekeeper.
 - **Linux:** extract the archive and run `PDF-x86_64.AppDir/AppRun` (it sets up the bundled libraries).
+- **Windows:** extract the whole zip, keep its folders together, and run `bin\pdf-notes.exe`. The app is not
+  code-signed, so Windows SmartScreen may show "Windows protected your PC" the first time; choose
+  More info, then Run anyway.
 
 ## What is inside
 
 Each archive bundles PDFium for rendering and Tesseract with English and Ukrainian models for OCR.
-Third-party licenses ship inside every archive: `THIRD-PARTY-NOTICES/` (macOS) and
-`usr/Resources/licenses/` (Linux). See [docs/notices.md](docs/notices.md).
+Third-party licenses ship inside every archive: `THIRD-PARTY-NOTICES/` (macOS),
+`usr/Resources/licenses/` (Linux) and `licenses/` (Windows). See [docs/notices.md](docs/notices.md).
+
+The Linux and Windows archives bundle some LGPL/GPL libraries. Their complete corresponding source is
+published on the same release page: `PDF-0.1.0-linux-debian-sources.tar` and
+`PDF-0.1.0-windows-msys2-sources.tar`.
 
 ## Security and privacy
 
