@@ -16,7 +16,7 @@ This badge on the public download page is the attribution that license asks for.
 
 | Platform | File | Requirements | Tested |
 |---|---|---|---|
-| macOS | `PDF-0.1.0-macos-arm64.zip` from [v0.1.0](https://github.com/dmmeteo/pdf/releases/tag/v0.1.0) | Apple silicon (arm64), macOS 27.0.1 or later | accepted on a Mac |
+| macOS | [`PDF-1.0.0-macos-arm64.dmg`](https://github.com/dmmeteo/pdf/releases/download/v1.0.0/PDF-1.0.0-macos-arm64.dmg) (disk image) | Apple silicon (arm64), macOS 27.0.1 or later | built natively from the 1.0.0 source; opened a PDF and quit normally on a Mac |
 | Linux | `PDF-1.0.0-linux-x86_64.tar.gz` | x86_64, glibc 2.36 or later, X11 or Wayland | started and rendered a PDF in a Debian 12 container |
 | Windows | `PDF-1.0.0-windows-x86_64.zip` | 64-bit Windows (x86_64) | started and rendered a PDF under Wine 11 on Linux; not yet tested on a Windows PC |
 
@@ -26,15 +26,16 @@ Download from the [v1.0.0 release](https://github.com/dmmeteo/pdf/releases/tag/v
 
 **About the version number.** The first release is version 1.0.0. It was first published as v0.1.0.
 The Linux and Windows 1.0.0 archives contain the same tested executables as their v0.1.0 archives; only the
-archive name and the version named in the notices changed, so they were not tested again. The macOS app also
-records its version inside the executable, so a macOS 1.0.0 archive needs a new build on a Mac. Until that
-build is published here, the macOS download is the tested `PDF-0.1.0-macos-arm64.zip`. The
-[v0.1.0 release](https://github.com/dmmeteo/pdf/releases/tag/v0.1.0) and its links stay available.
+archive name and the version named in the notices changed, so they were not tested again. The macOS app
+records its version inside the executable, so macOS 1.0.0 is a new native build from the 1.0.0 source, shipped
+as a disk image. The [v0.1.0 release](https://github.com/dmmeteo/pdf/releases/tag/v0.1.0), including the
+earlier macOS zip, stays available.
 
 ## Install
 
-- **macOS:** extract the zip and move PDF.app to Applications. This release is not notarized by Apple;
-  see [first launch on macOS](docs/first-launch-macos.md) for the one-time Open Anyway step.
+- **macOS:** open the disk image and drag PDF.app onto the Applications folder. PDF.app has an ad hoc
+  signature only: it is not signed with an Apple Developer ID and not notarized by Apple. See
+  [first launch on macOS](docs/first-launch-macos.md) for the one-time Open Anyway step.
   It does not need a terminal command and does not turn off Gatekeeper.
 - **Linux:** extract the archive and run `PDF-x86_64.AppDir/AppRun` (it sets up the bundled libraries).
 - **Windows:** extract the whole zip, keep its folders together, and run `bin\pdf-notes.exe`. The app is not
@@ -44,7 +45,7 @@ build is published here, the macOS download is the tested `PDF-0.1.0-macos-arm64
 ## What is inside
 
 Each archive bundles PDFium for rendering and Tesseract with English and Ukrainian models for OCR.
-Third-party licenses ship inside every archive: `THIRD-PARTY-NOTICES/` (macOS),
+Third-party licenses ship inside every archive: `THIRD-PARTY-NOTICES/` (macOS, in the disk image),
 `usr/Resources/licenses/` (Linux) and `licenses/` (Windows). See [docs/notices.md](docs/notices.md).
 
 The Linux and Windows archives bundle some LGPL/GPL libraries. Their corresponding source is published on the

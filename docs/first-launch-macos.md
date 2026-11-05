@@ -2,7 +2,7 @@
 
 PDF is free to download. This release is not notarized by Apple, so macOS may block the first launch with an unidentified-developer warning.
 
-1. Extract the download and move **PDF.app** to **Applications**.
+1. Open the disk image and drag **PDF.app** onto **Applications**.
 2. Try opening PDF once.
 3. For that developer warning, open **System Settings → Privacy & Security**. Under Security, choose **Open Anyway** for PDF. Some macOS versions first show an **Open** button.
 4. Confirm opening PDF and authenticate if macOS asks. Later launches open normally.
