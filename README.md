@@ -16,7 +16,7 @@ This badge on the public download page is the attribution that license asks for.
 
 | Platform | Download | Requirements |
 |---|---|---|
-| macOS | [Apple silicon disk image](https://artifacts.dmmeteo.dev/pdf/latest/macos-arm64) | Apple silicon (arm64), macOS 27.0.1 or later |
+| macOS | [Apple silicon disk image](https://artifacts.dmmeteo.dev/pdf/latest/macos-arm64) | Apple silicon (arm64), macOS 26.0 minimum |
 | Linux | [x86_64 AppImage](https://artifacts.dmmeteo.dev/pdf/latest/linux-x86_64) | x86_64, glibc 2.36 or later, the host's desktop, fonts and graphics libraries |
 | Linux | [arm64 AppImage](https://artifacts.dmmeteo.dev/pdf/latest/linux-arm64) | arm64, glibc 2.36 or later, the host's desktop, fonts and graphics libraries |
 | Debian 12 | [amd64 package](https://artifacts.dmmeteo.dev/pdf/latest/debian12-amd64) | Debian 12 (bookworm) only, x86_64; not other Debian or Ubuntu releases |
